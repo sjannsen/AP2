@@ -7,6 +7,7 @@ class ParkTicket(entryTime_parameter: Time) {
 
     val entryTime = entryTime_parameter
     var exitTime: Time? = null
+        get() = field
 
     //Definition der Methoden parkingDuration() und hoursStarted() als backing Properties / Eigenschaften ohne Felder
     val parkingDuration : Int
@@ -14,7 +15,6 @@ class ParkTicket(entryTime_parameter: Time) {
         if (exitTime == null) {
             println("Parkticket muss vorher korrekt abgestempelt werden!")
             throw MissingCheckoutException()
-            return 0
         }
             return (exitTime?.hour ?: 1380) * 60 + (exitTime?.minute ?: 59) - (entryTime.hour * 60 + entryTime.minute)
     }

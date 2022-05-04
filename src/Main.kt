@@ -1,9 +1,7 @@
-import kotlin.math.roundToInt
-
 fun main() {
 //    val time1 = Time(12, 0) // valide Uhrzeit
 //    val time2 = Time(12, 30) // valide Uhrzeit
-//    val time3 = Time (26 , 120) // invalide Uhrzeit . Programm stürzt mit einer Fehlermeldung ( Exception ) ab.
+//   val time3 = Time (26 , 120) // invalide Uhrzeit . Programm stürzt mit einer Fehlermeldung ( Exception ) ab.
 //    val time4 = Time (-5, -10) // invalide Uhrzeit . Programm stürzt miteiner Fehlermeldung ( Exception ) ab.
 //
 //    val entryTime = Time(12, 0)
@@ -29,13 +27,13 @@ fun main() {
 //    println(ticket2.parkingDuration)
 //    println(ticket2.hoursStarted)
 //
-//
-//    val default = Tariff.STANDARD
+
+//    val default = Tariff.DEFAULT
 //    println(default.price()) // Gibt 1.99 aus
 //    val weekend = Tariff.WEEKEND
 //    println(weekend.price()) // Gibt 2.99 aus
 
-    val machine = TicketMachine(Tariff.STANDARD)
+    val machine = TicketMachine(Tariff.DEFAULT)
     val ticket1 = machine.generate(Time(12, 0))
     val ticket2 = machine.generate(Time(12, 30))
     val ticket3 = machine.generate(Time(13, 30))

@@ -1,5 +1,5 @@
 enum class Tariff {
-    STANDARD {
+    DEFAULT {
         override fun price() = 1.99
     },
     EVENT {
