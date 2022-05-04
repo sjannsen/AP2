@@ -11,7 +11,7 @@ class TicketMachine(var currentTariff: Tariff) {
     fun validTickets() : List<ParkTicket> {
         val validParkTickets = mutableListOf<ParkTicket>()
         for (parkTicket in this.parkTickets) {
-            if (parkTicket.exitTime != null) {
+            if (parkTicket.valid == true) {
                 validParkTickets.add(parkTicket)
             }
         }

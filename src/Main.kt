@@ -45,6 +45,7 @@ fun main() {
     println(machine.shortestParkingDuration()) // Gibt 30 aus
     println(machine.averageParkingDuration()) // Gibt 56 aus ((30 + 60 + 80) / 3)
     println(machine.revenues()) // Gibt 7.96 aus ((1 + 1 + 2) * machine.tariff.price())
+
 }
 
 

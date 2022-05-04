@@ -6,8 +6,21 @@ class ParkTicket(entryTime_parameter: Time) {
     class MissingCheckoutException : Exception()
 
     val entryTime = entryTime_parameter
-    var exitTime: Time? = null
-        get() = field
+    private var exitTime: Time? = null
+
+    var valid = false
+    get() {
+        if(exitTime == null)
+            return false
+        else {
+            if (exitTime!!.hour > entryTime.hour)
+                return true
+            else if (exitTime!!.hour == entryTime.hour && exitTime!!.minute > entryTime.minute)
+                return true
+            else
+                return false
+        }
+    }
 
     //Definition der Methoden parkingDuration() und hoursStarted() als backing Properties / Eigenschaften ohne Felder
     val parkingDuration : Int
